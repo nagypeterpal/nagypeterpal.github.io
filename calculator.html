@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Unit Converter</h1>
+      <div class="category-buttons">
+        <button onclick="setCategory('length')">📏 Length</button>
+        <button onclick="setCategory('weight')">⚖️ Weight</button>
+        <button onclick="setCategory('temperature')">🌡️ Temperature</button>
+        <button onclick="setCategory('area')">📐 Area</button>
+        <button onclick="setCategory('volume')">🧊 Volume</button>
+        <button onclick="setCategory('time')">⏱️ Time</button>
+      </div>
+
+      <div class="converter">
+        <div class="unit-group">
+          <label for="fromUnit"> <span class="icon">🔁</span> From Unit </label>
+          <select id="fromUnit"></select>
+        </div>
+
+        <div class="unit-group">
+          <label for="toUnit"> <span class="icon">🎯</span> To Unit </label>
+          <select id="toUnit"></select>
+        </div>
+
+        <input type="number" id="inputValue" placeholder="Enter value" />
+        <button onclick="convert()">Convert</button>
+      </div>
+
+      <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
